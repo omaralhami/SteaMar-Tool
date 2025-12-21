@@ -1,0 +1,11 @@
+# Ignore everything except what we want to publish
+*
+
+# But include these files
+!.gitignore
+!README.md
+!LICENSE
+
+# Include releases folder (but not source code)
+!releases/
+
