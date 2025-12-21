@@ -1,11 +1,15 @@
-# Ignore everything except what we want to publish
+# Ignore everything by default
 *
 
-# But include these files
+# But include these specific files
 !.gitignore
 !README.md
 !LICENSE
+!SETUP_GUIDE.md
+!RELEASE_WORKFLOW.md
+!create-release.ps1
 
-# Include releases folder (but not source code)
+# Include releases folder structure
 !releases/
+!releases/.gitkeep
 
