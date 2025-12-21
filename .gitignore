@@ -3,11 +3,11 @@
 
 # But include these specific files
 !.gitignore
+!.github/
+!.github/**
 !README.md
 !LICENSE
-!SETUP_GUIDE.md
-!RELEASE_WORKFLOW.md
-!create-release.ps1
+!index.html
 
 # Include releases folder structure
 !releases/
