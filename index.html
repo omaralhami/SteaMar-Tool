@@ -74,10 +74,13 @@
         }
 
         .hero {
+            padding: 80px 0;
+        }
+
+        .hero-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-            padding: 80px 0;
             align-items: center;
         }
 
@@ -298,9 +301,12 @@
 
         @media (max-width: 768px) {
             .hero {
+                padding: 40px 0;
+            }
+
+            .hero-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
-                padding: 40px 0;
             }
 
             .hero-content h1 {
@@ -342,28 +348,30 @@
 
     <main>
         <section class="hero">
-            <div class="container" style="display: contents;">
-                <div class="hero-content">
-                    <h1>SteaMar Tool</h1>
-                    <p>
-                        Windows tool for managing Steam game manifests, Lua scripts, and game activations. 
-                        Better performance, auto-updates, and more features. 
-                        Please make sure you're logged in at <span class="highlight">generator.ryuu.lol</span>.
-                    </p>
-                    <div class="buttons">
-                        <a href="#download" class="btn btn-primary">
-                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
-                            Download Latest
-                        </a>
-                        <a href="https://github.com/omaralhami/SteaMar-Tool/releases" target="_blank" class="btn btn-secondary">
-                            View All Releases
-                        </a>
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1>SteaMar Tool</h1>
+                        <p>
+                            Windows tool for managing Steam game manifests, Lua scripts, and game activations. 
+                            Better performance, auto-updates, and more features. 
+                            Please make sure you're logged in at <span class="highlight">generator.ryuu.lol</span>.
+                        </p>
+                        <div class="buttons">
+                            <a href="#download" class="btn btn-primary">
+                                <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                                </svg>
+                                Download Latest
+                            </a>
+                            <a href="https://github.com/omaralhami/SteaMar-Tool/releases" target="_blank" class="btn btn-secondary">
+                                View All Releases
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-image">
-                    <img src="logo.jpg" alt="SteaMar Tool Screenshot" onerror="this.style.display='none'">
+                    <div class="hero-image">
+                        <img src="logo.jpg" alt="SteaMar Tool Screenshot" onerror="this.style.display='none'">
+                    </div>
                 </div>
             </div>
         </section>
