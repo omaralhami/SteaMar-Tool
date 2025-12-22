@@ -159,34 +159,141 @@
             .frame { grid-template-columns: 1fr; height: auto; padding-bottom: 100px; }
             .cta-row { position: static; margin-top: 10px; }
         }
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .language-switcher select {
+            padding: 8px 12px;
+            background: rgba(22,22,22,0.95);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s ease;
+            font-weight: 600;
+        }
+        .language-switcher select:hover {
+            border-color: var(--accent);
+            background: rgba(26,26,26,0.95);
+        }
+        .language-switcher select:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(107, 114, 153, 0.1);
+        }
     </style>
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                brand: "SteaMar Tool",
+                heroTitle: "Manage Steam manifests in one click.",
+                heroSubtitle: "Add Steam games, pull manifests, grab Lua activation scripts, and browse online fixes in one place.",
+                howDoesItWork: "How does it work?",
+                howDoesItWorkAnswer: "Add games to Steam, download and manage manifests, run built-in Lua activations, and browse online fixes, all in one tool.",
+                howFast: "How fast is it?",
+                howFastAnswer: "Manifest pulls and game adds are optimized with cached sessions, so most actions complete in a click.",
+                requirements: "Requirements?",
+                requirementsAnswer: "Windows 10/11 (64-bit) with Steam and Discord installed and signed in.",
+                isItSafe: "Is it safe?",
+                isItSafeAnswer: "Yes. Manifests and Lua come from the official GitHub, applied locally. Your Steam login isn't stored, and everything stays on your PC. Discord is our support.",
+                download: "Download",
+                discord: "Discord",
+                releases: "Releases"
+            },
+            ar: {
+                brand: "أداة SteaMar",
+                heroTitle: "إدارة ملفات Steam التوضيحية بنقرة واحدة.",
+                heroSubtitle: "أضف ألعاب Steam، احصل على الملفات التوضيحية، احصل على سكربتات Lua للتفعيل، وتصفح إصلاحات الألعاب في مكان واحد.",
+                howDoesItWork: "كيف يعمل؟",
+                howDoesItWorkAnswer: "أضف الألعاب إلى Steam، قم بتنزيل وإدارة الملفات التوضيحية، قم بتشغيل تفعيلات Lua المدمجة، وتصفح إصلاحات الألعاب، كل ذلك في أداة واحدة.",
+                howFast: "ما مدى سرعته؟",
+                howFastAnswer: "عمليات سحب الملفات التوضيحية وإضافة الألعاب محسّنة مع جلسات مخزنة مؤقتاً، لذلك تكتمل معظم الإجراءات بنقرة واحدة.",
+                requirements: "المتطلبات؟",
+                requirementsAnswer: "Windows 10/11 (64-bit) مع تثبيت Steam و Discord وتسجيل الدخول.",
+                isItSafe: "هل هو آمن؟",
+                isItSafeAnswer: "نعم. الملفات التوضيحية و Lua تأتي من GitHub الرسمي، يتم تطبيقها محلياً. لا يتم تخزين تسجيل الدخول إلى Steam، وكل شيء يبقى على جهازك. Discord هو دعمنا.",
+                download: "تحميل",
+                discord: "Discord",
+                releases: "الإصدارات"
+            }
+        };
+        
+        function t(key, lang = 'en') {
+            const langData = translations[lang] || translations.en;
+            return langData[key] || translations.en[key] || key;
+        }
+        
+        function applyTranslations(lang) {
+            const brandText = document.getElementById('brandText');
+            const heroTitle = document.getElementById('heroTitle');
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            const howDoesItWorkQ = document.getElementById('howDoesItWorkQ');
+            const howDoesItWorkA = document.getElementById('howDoesItWorkA');
+            const howFastQ = document.getElementById('howFastQ');
+            const howFastA = document.getElementById('howFastA');
+            const requirementsQ = document.getElementById('requirementsQ');
+            const requirementsA = document.getElementById('requirementsA');
+            const isItSafeQ = document.getElementById('isItSafeQ');
+            const isItSafeA = document.getElementById('isItSafeA');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const discordBtn = document.getElementById('discordBtn');
+            const releasesBtn = document.getElementById('releasesBtn');
+            
+            if (brandText) brandText.textContent = t('brand', lang);
+            if (heroTitle) heroTitle.textContent = t('heroTitle', lang);
+            if (heroSubtitle) heroSubtitle.textContent = t('heroSubtitle', lang);
+            if (howDoesItWorkQ) howDoesItWorkQ.textContent = t('howDoesItWork', lang);
+            if (howDoesItWorkA) howDoesItWorkA.textContent = t('howDoesItWorkAnswer', lang);
+            if (howFastQ) howFastQ.textContent = t('howFast', lang);
+            if (howFastA) howFastA.textContent = t('howFastAnswer', lang);
+            if (requirementsQ) requirementsQ.textContent = t('requirements', lang);
+            if (requirementsA) requirementsA.textContent = t('requirementsAnswer', lang);
+            if (isItSafeQ) isItSafeQ.textContent = t('isItSafe', lang);
+            if (isItSafeA) isItSafeA.textContent = t('isItSafeAnswer', lang);
+            if (downloadBtn) downloadBtn.textContent = t('download', lang);
+            if (discordBtn) discordBtn.textContent = t('discord', lang);
+            if (releasesBtn) releasesBtn.textContent = t('releases', lang);
+        }
+    </script>
 </head>
 <body>
+    <div class="language-switcher">
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
     <div class="frame">
         <div>
             <div class="brand">
                 <img src="logo.jpg" alt="SteaMar" onerror="this.style.display='none'">
-                <span>SteaMar Tool</span>
+                <span id="brandText">SteaMar Tool</span>
             </div>
             <div class="hero">
-                <h1>Manage Steam manifests in one click.</h1>
-                <p>Add Steam games, pull manifests, grab Lua activation scripts, and browse online fixes in one place.</p>
+                <h1 id="heroTitle">Manage Steam manifests in one click.</h1>
+                <p id="heroSubtitle">Add Steam games, pull manifests, grab Lua activation scripts, and browse online fixes in one place.</p>
                 <div class="accordions">
                     <div class="accordion active" onclick="toggle(this)">
-                        <div class="q"><span>How does it work?</span><span class="chev">▼</span></div>
-                        <div class="a">Add games to Steam, download and manage manifests, run built-in Lua activations, and browse online fixes, all in one tool.</div>
+                        <div class="q"><span id="howDoesItWorkQ">How does it work?</span><span class="chev">▼</span></div>
+                        <div class="a" id="howDoesItWorkA">Add games to Steam, download and manage manifests, run built-in Lua activations, and browse online fixes, all in one tool.</div>
                     </div>
                     <div class="accordion" onclick="toggle(this)">
-                        <div class="q"><span>How fast is it?</span><span class="chev">▼</span></div>
-                        <div class="a">Manifest pulls and game adds are optimized with cached sessions, so most actions complete in a click.</div>
+                        <div class="q"><span id="howFastQ">How fast is it?</span><span class="chev">▼</span></div>
+                        <div class="a" id="howFastA">Manifest pulls and game adds are optimized with cached sessions, so most actions complete in a click.</div>
                     </div>
                     <div class="accordion" onclick="toggle(this)">
-                        <div class="q"><span>Requirements?</span><span class="chev">▼</span></div>
-                        <div class="a">Windows 10/11 (64-bit) with Steam and Discord installed and signed in.</div>
+                        <div class="q"><span id="requirementsQ">Requirements?</span><span class="chev">▼</span></div>
+                        <div class="a" id="requirementsA">Windows 10/11 (64-bit) with Steam and Discord installed and signed in.</div>
                     </div>
                     <div class="accordion" onclick="toggle(this)">
-                        <div class="q"><span>Is it safe?</span><span class="chev">▼</span></div>
-                        <div class="a">Yes. Manifests and Lua come from the official GitHub, applied locally. Your Steam login isn’t stored, and everything stays on your PC. Discord is our support.</div>
+                        <div class="q"><span id="isItSafeQ">Is it safe?</span><span class="chev">▼</span></div>
+                        <div class="a" id="isItSafeA">Yes. Manifests and Lua come from the official GitHub, applied locally. Your Steam login isn't stored, and everything stays on your PC. Discord is our support.</div>
                     </div>
                 </div>
             </div>
@@ -195,9 +302,9 @@
             <img src="logo.jpg" alt="SteaMar Preview" onerror="this.style.display='none'">
         </div>
         <div class="cta-row">
-            <a class="btn primary" href="https://github.com/omaralhami/SteaMar-Tool/releases/download/v1.0.0/SteaMar.Tool.v1.exe" target="_blank" rel="noopener">Download</a>
-            <a class="btn" href="https://discord.gg/UkdAQ8q8Et" target="_blank" rel="noopener">Discord</a>
-            <a class="btn" href="https://github.com/omaralhami/SteaMar-Tool/releases" target="_blank" rel="noopener">Releases</a>
+            <a class="btn primary" href="https://github.com/omaralhami/SteaMar-Tool/releases/download/v1.0.1/SteaMar.Tool.v1.0.1.exe" target="_blank" rel="noopener" id="downloadBtn">Download</a>
+            <a class="btn" href="https://discord.gg/UkdAQ8q8Et" target="_blank" rel="noopener" id="discordBtn">Discord</a>
+            <a class="btn" href="https://github.com/omaralhami/SteaMar-Tool/releases" target="_blank" rel="noopener" id="releasesBtn">Releases</a>
         </div>
     </div>
     <script>
@@ -206,6 +313,25 @@
             document.querySelectorAll('.accordion').forEach(a => a.classList.remove('active'));
             if (!open) el.classList.add('active');
         }
+        
+        // Initialize language switcher and apply translations on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentLanguage = localStorage.getItem('language') || 'en';
+            
+            // Set up language switcher
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.value = currentLanguage;
+                languageSelect.addEventListener('change', (e) => {
+                    currentLanguage = e.target.value;
+                    localStorage.setItem('language', currentLanguage);
+                    applyTranslations(currentLanguage);
+                });
+            }
+            
+            // Apply translations on load
+            applyTranslations(currentLanguage);
+        });
     </script>
 </body>
 </html>
