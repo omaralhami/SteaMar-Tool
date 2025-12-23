@@ -1,50 +1,113 @@
 # SteaMar Tool
 
-Windows tool for managing Steam game manifests, Lua scripts, and game activations.
+<p align="center">
+  <img src="./assets/logo.png" alt="SteaMar Logo" width="120" />
+</p>
 
-## Download
+<p align="center">
+  <strong>SteaMar</strong> is a Windows tool for managing Steam game manifests, Lua activation scripts, and online fixes — all in one place.
+</p>
 
-Download the latest version from the [Releases](https://github.com/omaralhami/SteaMar-Tool/releases) page.
+<p align="center">
+  <a href="https://github.com/omaralhami/SteaMar-Tool/releases">Download</a> •
+  <a href="https://discord.gg/UkdAQ8q8Et">Discord</a>
+</p>
 
-Available as Setup Installer or Portable Version.
+---
+
+## Overview
+
+SteaMar is built for users who want a clean and fast way to manage Steam-related files without doing everything manually.
+
+The tool works locally on your device and uses **Discord** for authentication, access control, and plan management.  
+No Steam credentials are stored.
+
+---
+
+## How it works
+
+1. Install and open SteaMar
+2. Log in using Discord  
+   > You must be a member of the SteaMar Discord server to log in
+3. Browse games, manifests, and fixes inside the tool
+4. Add games to Steam or apply fixes
+5. Your Discord role controls your access level
+
+Join the Discord server here:  
+👉 https://discord.gg/UkdAQ8q8Et
+
+---
+
+## Plans & access
+
+Access is based on Discord roles linked to your plan.
+
+### Free
+- 1 download per day
+
+### Premium
+- 10 downloads per day  
+- Manual game updates through the Discord server
+
+### Premium +
+- Unlimited downloads  
+- Automatic game updates inside the tool  
+- Access to online activation fixes
+
+You can upgrade your plan **from inside the tool** using secure payments via **PayPal or Ko-fi**.  
+Once payment is completed, access is granted instantly through the Discord bot.
+
+---
 
 ## Features
 
 - Add games to your Steam library
-- Download and manage game manifests
-- Access Lua scripts for game activation
-- Browse online fixes for games
-- Manage your game collection
-- Share games with the community
-
-## System Requirements
-
-- Windows 10 or 11 (64-bit)
-- 4GB RAM minimum (8GB recommended)
-- 500MB free storage space
-- Internet connection required
-
-## Quick Start
-
-1. Download the latest release
-2. Run the installer or extract the portable version
-3. Launch SteaMar Tool
-4. Login with Discord if required
-5. Start adding games to your library
-
-## Privacy
-
-All data is stored locally on your computer. The tool only connects to external servers to download game manifests and fixes. Your game library and personal information remain private.
-
-## Support
-
-For issues or questions, please open an issue on GitHub.
-
-## License
-
-This software is provided as-is for personal use.
+- Download and manage Steam manifests
+- Apply Lua activation scripts
+- Browse online fixes
+- Automatic updates (Premium+)
+- Arabic and English language support
+- Discord-based authentication and access control
 
 ---
 
-Note: This tool is for educational purposes. Please respect Steam's Terms of Service.
+## System requirements
 
+- Windows 10 or 11 (64-bit)
+- Steam installed
+- Discord installed and logged in
+- Internet connection
+
+---
+
+## Download
+
+Get the latest version from the releases page:  
+👉 https://github.com/omaralhami/SteaMar-Tool/releases
+
+Available formats:
+- Installer
+- Portable version
+
+---
+
+## Privacy & safety
+
+- All operations run locally on your machine
+- No Steam login data is stored
+- Manifests and scripts are applied locally
+- Discord is used only for authentication and access control
+
+---
+
+## Support
+
+For help, updates, and announcements, join the Discord server:  
+👉 https://discord.gg/UkdAQ8q8Et
+
+---
+
+## Notes
+
+This tool is intended for educational and personal use.  
+Always respect Steam’s terms of service and applicable laws.
