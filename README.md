@@ -24,6 +24,14 @@ No Steam credentials are stored.
 
 ---
 
+## Tool preview
+
+<p align="center">
+  <img src="./assets/tool.png" alt="SteaMar Tool Preview" width="800" />
+</p>
+
+---
+
 ## How it works
 
 1. Install and open SteaMar
@@ -67,47 +75,4 @@ Once payment is completed, access is granted instantly through the Discord bot.
 - Browse online fixes
 - Automatic updates (Premium+)
 - Arabic and English language support
-- Discord-based authentication and access control
-
----
-
-## System requirements
-
-- Windows 10 or 11 (64-bit)
-- Steam installed
-- Discord installed and logged in
-- Internet connection
-
----
-
-## Download
-
-Get the latest version from the releases page:  
-👉 https://github.com/omaralhami/SteaMar-Tool/releases
-
-Available formats:
-- Installer
-- Portable version
-
----
-
-## Privacy & safety
-
-- All operations run locally on your machine
-- No Steam login data is stored
-- Manifests and scripts are applied locally
-- Discord is used only for authentication and access control
-
----
-
-## Support
-
-For help, updates, and announcements, join the Discord server:  
-👉 https://discord.gg/UkdAQ8q8Et
-
----
-
-## Notes
-
-This tool is intended for educational and personal use.  
-Always respect Steam’s terms of service and applicable laws.
+- Discord-based authentication
