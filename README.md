@@ -55,14 +55,14 @@ Access is based on Discord roles linked to your plan.
 
 ### Premium
 - 10 downloads per day  
-- Manual game updates through the Discord server
+- Manual game updates through the Discord bot
 
 ### Premium +
 - Unlimited downloads  
 - Automatic game updates inside the tool  
-- Access to online activation fixes
+- Access to online games fixes
 
-You can upgrade your plan **from inside the tool** using secure payments via **PayPal or Ko-fi**.  
+You can upgrade your plan **from inside the tool** using secure payments via **Ko-fi/PayPal**.  
 Once payment is completed, access is granted instantly through the Discord bot.
 
 ---
