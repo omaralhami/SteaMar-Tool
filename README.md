@@ -1,7 +1,7 @@
 # SteaMar Tool
 
 <p align="center">
-  <img src="./assets/logo.png" alt="SteaMar Logo" width="120" />
+  <img src="./assets/logo.png" alt="SteaMar Logo" width="240" />
 </p>
 
 <p align="center">
