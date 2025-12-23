@@ -10,7 +10,8 @@
 
 <p align="center">
   <a href="https://github.com/omaralhami/SteaMar-Tool/releases">Download</a> •
-  <a href="https://discord.gg/UkdAQ8q8Et">Discord</a>
+  <a href="https://discord.gg/UkdAQ8q8Et">Discord</a> •
+  <a href="https://steamartool.vercel.app/">Website</a>
 </p>
 
 ---
